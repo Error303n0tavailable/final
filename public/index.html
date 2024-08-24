@@ -1,1 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Padding</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Background Music -->
+    <audio id="background-music" loop>
+        <source src="dilaw.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
 
+    <!-- Play/Pause Button -->
+    <button id="play-button">Play Music</button>
+
+    <div class="profile-container">
+        <div class="profile-image">
+            <img src="https://i.postimg.cc/Wzmrhn0D/90277116-2985762731466766-4052097246282383360-n.jpg" alt="Profile Picture">
+        </div>
+        <div class="profile-info">
+            <h2 style="color: white;">Things I Like About Her</h2>
+            <ul>
+                <li>Her smile</li>
+                <li>Her courage</li>
+                <li>Her kindness</li>
+                <li>Her pureness</li>
+                <li>Her personality</li>
+            </ul>
+        </div>
+        <div class="profile-info">
+            <h2 style="color: white;">Why I Like Her</h2>
+            <p>I like her because she's so pure, she doesn't fake her feelings. It feels like she shows her love or affection in a unique way.</p>
+        </div>
+        <div class="profile-info">
+            <h2 style="color: white;">Thoughts on Her</h2>
+            <p>She is truly an amazing person. She's very strong and inspires me with the challenges she has overcome. I want to be like her. She encourages me to be strong and move forward despite the challenges in my life.</p>
+        </div>
+    </div>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url('https://i.postimg.cc/L6RLGcMj/happy-valentines-day-with-paper-hearts-and-copy-space-on-red-background-vector.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .profile-container {
+            background-color: red;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .profile-image {
+            margin-bottom: 20px;
+        }
+        
+        .profile-image img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #ddd;
+        }
+        
+        .profile-info h2 {
+            margin: 0;
+            color: white;
+        }
+        
+        .profile-info ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .profile-info ul li {
+            background: #e0e0e0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 5px 0;
+            padding: 10px;
+            color: #333;
+        }
+        
+        .profile-info p {
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 10px 0;
+            padding: 10px;
+            color: #333;
+        }
+        
+        #play-button {
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        #play-button:hover {
+            background-color: #555;
+        }
+    </style>
+
+    <script>
+        const audio = document.getElementById('background-music');
+        const playButton = document.getElementById('play-button');
+
+        playButton.addEventListener('click', () => {
+            if (audio.paused) {
+                audio.play();
+                playButton.textContent = 'Pause Music';
+            } else {
+                audio.pause();
+                playButton.textContent = 'Play Music';
+            }
+        });
+    </script>
+</body>
+</html>
